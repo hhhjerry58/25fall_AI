@@ -42,7 +42,6 @@ The files are organized as follows:
 cd codes
 python source{i}.py # Running command for each python file
 ```
-In source2.py we could modify b to change loss function.
 
 
 

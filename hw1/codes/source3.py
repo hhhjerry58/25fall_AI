@@ -7,7 +7,10 @@ from torch.utils.data import DataLoader, random_split
 import matplotlib.pyplot as plt
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f'using device:{device}')
-
+if torch.cuda.is_available():
+    print(f"GPU device name: {torch.cuda.get_device_name(0)}")
+else:
+    print("CUDA not available, using CPU.")
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.1307,), (0.3081,))]
